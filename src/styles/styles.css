@@ -235,3 +235,114 @@ nav {
   from { opacity: 0; transform: translateY(28px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
+/* ── BRANDS ── */
+.section-brands {
+  padding: 5rem 8%;
+  background: var(--black-2);
+  border-top: 1px solid rgba(245,216,0,0.08);
+  border-bottom: 1px solid rgba(245,216,0,0.08);
+}
+ 
+.section-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 2.5rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.section-label::before { content: ''; width: 28px; height: 2px; background: var(--yellow); }
+.section-label span { color: rgba(255,255,255,0.4); }
+ 
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5px;
+  background: rgba(245,216,0,0.08);
+}
+ 
+.brand-card {
+  background: var(--black-2);
+  padding: 2rem 1.75rem 0;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+.brand-card:hover { background: var(--black-3); }
+.brand-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--yellow);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.brand-card:hover::before { transform: scaleX(1); }
+ 
+.brand-badge {
+  position: absolute; top: 1.25rem; right: 1.25rem;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border-radius: 2px;
+}
+.badge-new   { background: var(--yellow); color: var(--black); }
+.badge-value { background: var(--lime);   color: var(--black); }
+ 
+.brand-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  margin-bottom: 0.3rem;
+}
+.brand-tagline {
+  color: rgba(255,255,255,0.45);
+  font-size: 0.82rem;
+  line-height: 1.55;
+  margin-bottom: 1rem;
+}
+.brand-price {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--yellow);
+  letter-spacing: 0.02em;
+  margin-bottom: 1.5rem;
+}
+.brand-phone-img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 10px 30px rgba(0,0,0,0.6));
+  transition: transform 0.4s ease;
+}
+.brand-card:hover .brand-phone-img { transform: translateY(-8px) scale(1.03); }
+ 
+.btn-buynow {
+  display: block;
+  width: 100%;
+  background: var(--black-3);
+  color: var(--white);
+  border: none;
+  padding: 0.85rem;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: background 0.2s, color 0.2s;
+  border-top: 1px solid rgba(245,216,0,0.12);
+}
+.btn-buynow:hover { background: var(--yellow); color: var(--black); }
