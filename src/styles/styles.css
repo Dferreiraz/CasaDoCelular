@@ -346,3 +346,81 @@ nav {
   border-top: 1px solid rgba(245,216,0,0.12);
 }
 .btn-buynow:hover { background: var(--yellow); color: var(--black); }
+
+/* ── PROMOS ── */
+.section-promos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5px;
+  background: rgba(245,216,0,0.08);
+}
+ 
+.promo-card {
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.promo-card-a { background: var(--yellow); }
+.promo-card-b { background: var(--lime); }
+ 
+.promo-tag {
+  display: inline-block;
+  background: rgba(0,0,0,0.15);
+  color: var(--black);
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  margin-bottom: 1.25rem;
+  border-radius: 2px;
+}
+ 
+.promo-card h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 0.95;
+  color: var(--black);
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+ 
+.promo-card p {
+  color: rgba(0,0,0,0.65);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+  max-width: 320px;
+}
+ 
+.btn-promo {
+  display: inline-block;
+  background: var(--black);
+  color: var(--white);
+  padding: 0.7rem 1.5rem;
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-promo:hover { background: #222; transform: translateY(-2px); }
+ 
+.promo-decor {
+  position: absolute;
+  right: -20px; bottom: -20px;
+  width: 180px; height: 180px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.06);
+  pointer-events: none;
+}
+.promo-decor-2 {
+  position: absolute;
+  right: 60px; bottom: 60px;
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.06);
+  pointer-events: none;
+}
