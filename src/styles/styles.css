@@ -779,3 +779,17 @@ footer {
 .footer-links a:hover {
     color: var(--yellow);
 }
+
+/* ── RESPONSIVO ── */
+@media (max-width: 900px) {
+  .hero               { grid-template-columns: 1fr; padding-top: 100px; }
+  .hero-visual        { display: none; }
+  .brands-grid        { grid-template-columns: 1fr; }
+  .section-promos     { grid-template-columns: 1fr; }
+  .features-grid      { grid-template-columns: 1fr 1fr; }
+  .feature-item:nth-child(2) { border-right: none; }
+  .feature-item:nth-child(3) { border-right: 1px solid rgba(245,216,0,0.1); }
+  .nav-links          { display: none; }
+  footer              { flex-direction: column; text-align: center; }
+  .footer-links       { justify-content: center; }
+}
